@@ -1,39 +1,9 @@
 import logo from './logo.svg';
 import './App.scss';
 import './styles/index.scss'
-import { BrowserRouter as Router , Route, Link, Routes } from "react-router-dom";
+import { BrowserRouter as Router , Route, Link, Routes, useNavigate } from "react-router-dom";
 import Login from './login';
-
-function Home() {
-  return (
-    <>
-      <main>
-        <h2>Welcome to the homepage!</h2>
-        <p>You can do this, I believe in you.</p>
-      </main>
-      <nav>
-        <Link to="/about">About</Link>
-      </nav>
-    </>
-  );
-}
-
-function About() {
-  return (
-    <>
-      <main>
-        <h2>Who are we?</h2>
-        <p>
-          That feels like an existential question, don't you
-          think?
-        </p>
-      </main>
-      <nav>
-        <Link to="/">Home</Link>
-      </nav>
-    </>
-  );
-}
+import DataEmployee from './dataEmployee';
 
 function App() {
   return (
@@ -41,8 +11,9 @@ function App() {
       <div>
       
       <Routes >
-        <Route path="/" element={<Login />} />
-        {/* <Route path="about" element={<About />} /> */}
+        <Route path="/" element={<DataEmployee />} />
+        <Route path="/Login" element={<Login />} />
+        {/* <Route path="/data" element={<DataEmployee />} /> */}
       </Routes>
       </div>
    
