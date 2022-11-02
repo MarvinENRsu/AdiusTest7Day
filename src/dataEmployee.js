@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import Header from './component/header'
 
 
 function DataEmployee() {
@@ -24,9 +25,7 @@ function DataEmployee() {
 
   return (
     <div className="App">
-      <div className="header-box"> 
-          header
-        </div>
+      <Header></Header>
         <div className="table-section">
           <table>
             <tr>

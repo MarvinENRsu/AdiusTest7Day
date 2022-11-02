@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/rules-of-hooks */
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router , Route, Link, Routes, useNavigate, redirect } from "react-router-dom";
 
@@ -8,6 +8,22 @@ function login() {
   const navigate = useNavigate()
     const [email, setEmail] = useState('eve.holt@reqres.in')
     const [password, setPassword] = useState('cityslicka')
+
+    // useEffect(() => {
+    //   console.log('start')
+
+    //   return () => {
+    //     console.log('destroy')
+    //   }
+    // }, [])
+
+    useEffect(() => {
+      console.log('typing')
+      const token = sessionStorage.getItem('token')
+    if (token) navigate('/')
+
+    }, [])
+
     const onClickLogin = async () => {
         await axios.post('https://reqres.in/api/login', {
             "email": email,
