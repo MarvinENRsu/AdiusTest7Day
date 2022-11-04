@@ -23,22 +23,31 @@ function login() {
         if (token) navigate('/')
     }, [])
 
-    const onClickLogin = async () => {
-        await axios.post('https://reqres.in/api/login', {
-            "email": email,
-            "password": password
-        }).then((res) => {
-          console.log(res)
-            if (res.data.token) {
-              sessionStorage.setItem('token', res.data.token)
-              console.log('if')
-              navigate('/')
-            }
-        })
+    const onClickLogin = async () => { 
+      toast()
+        // await axios.post('https://reqres.in/api/login', {
+        //     "email": email,
+        //     "password": password
+        // }).then((res) => {
+        //   console.log(res)
+        //     if (res.data.token) {
+        //       sessionStorage.setItem('token', res.data.token)
+        //       console.log('if')
+        //       navigate('/')
+        //     }
+        // })
+    }
+
+    const toast = () =>{
+    
     }
 
     return (
         <div className="App">
+          {/* <div className="toast"> */}
+            {/* <div className="toast-box">icon</div> */}
+            {/* <div className="desc">A notification message..</div> */}
+          {/* </div> */}
           <div className="login-section">
             <div className="login-box">
               <div className='mb-1'> 
