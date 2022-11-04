@@ -6,8 +6,8 @@ import { BrowserRouter as Router , Route, Link, Routes, useNavigate, redirect } 
 
 function login() {
   const navigate = useNavigate()
-    const [email, setEmail] = useState('eve.holt@reqres.in')
-    const [password, setPassword] = useState('cityslicka')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     // useEffect(() => {
     //   console.log('start')
@@ -20,8 +20,7 @@ function login() {
     useEffect(() => {
       console.log('typing')
       const token = sessionStorage.getItem('token')
-    if (token) navigate('/')
-
+        if (token) navigate('/')
     }, [])
 
     const onClickLogin = async () => {
@@ -43,7 +42,7 @@ function login() {
           <div className="login-section">
             <div className="login-box">
               <div className='mb-1'> 
-                Login {email}
+                Login
               </div>
               <div className='mb-1' >
                 <div for="fname">

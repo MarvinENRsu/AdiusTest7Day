@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import Header from './component/header'
+import Footer from './component/footer'
 
 
 function DataEmployee() {
@@ -10,7 +11,8 @@ function DataEmployee() {
 
   useEffect(() => {
     const token = sessionStorage.getItem('token')
-    if (!token) navigate('/login')
+    // !token = null, undefined, '', 0
+    if (token) navigate('/login')
     getDataUsers()
   }, [])
 
@@ -29,7 +31,6 @@ function DataEmployee() {
         <div className="table-section">
           <table>
             <tr>
-              {/* <th>Number</th> */}
               <th>Email</th>
               <th>Fist Name</th>
               <th>Last Name</th>
@@ -49,9 +50,7 @@ function DataEmployee() {
           })}
           </table>
         </div>
-        <div className='footer-box'>
-        footer
-        </div>
+        <Footer></Footer>
     </div>
   );
 }

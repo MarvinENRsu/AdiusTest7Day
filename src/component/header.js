@@ -6,8 +6,8 @@ import { BrowserRouter as Router , Route, Link, Routes, useNavigate, redirect } 
 
 function header() {
   const navigate = useNavigate()
-    const [email, setEmail] = useState('eve.holt@reqres.in')
-    const [password, setPassword] = useState('cityslicka')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
 
     const navRef = useRef();
 
@@ -26,12 +26,11 @@ function header() {
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
-					{/* <FaTimes /> */}
                     Header
 				</button>
 			</nav>
 			<button className="nav-btn" onClick={showNavbar}>
-				{/* <FaBars /> */}Close
+				Close
 			</button>
 		</header>
     )
