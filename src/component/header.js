@@ -23,6 +23,7 @@ function header() {
 				<a href="/#">My work</a>
 				<a href="/#">Blog</a>
 				<a href="/#">About me</a>
+				<hr className='line-header'></hr>
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>

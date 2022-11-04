@@ -8,11 +8,12 @@ function footer() {
   return (
     <div className='section'>
       <div className='row'>
-        <div className='column'>
+        <div className='column-2'>
           <h1>Logo</h1>
           <p>Making the world a better place through </p>
           <p>constructing elegant hierarchies.</p>
         </div>
+        
         <div className='column'>
           <h1>Solutions</h1>
           <p>Marketing</p>
@@ -21,11 +22,11 @@ function footer() {
           <p>Insights</p>
         </div>
         <div className='column'>
-          <h1>Solutions</h1>
-          <p>Marketing</p>
-          <p>Analytics</p>
-          <p>Commeerce</p>
-          <p>Insights</p>
+          <h1>Support</h1>
+          <p>Pricing</p>
+          <p>Documentation</p>
+          <p>Guides</p>
+          <p>API Status</p>
         </div>
         <div className='column'>
           <h1>Company</h1>
@@ -41,9 +42,9 @@ function footer() {
           <p>Terms</p>
         </div>
       </div>
-      {/* <div className='row'>
-        <p>©2020 work, Inc. All rights reserved.</p>
-      </div>   */}
+      <div className='row'>
+            <p>©2020 work, Inc. All rights reserved.</p>
+          </div>   
     </div>
   )
 }
