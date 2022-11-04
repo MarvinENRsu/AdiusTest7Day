@@ -8,23 +8,57 @@
 
 table {
   border: 2px solid forestgreen;
-  width: 800px;
-  height: 200px;
+  width: 90%;
+  height: 100vh;
 }
   
 th {
   border-bottom: 1px solid black;
   text-align: start;
+  
 }
   
 td {
   text-align: start;
+  align-content: center;
+  
 }
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   margin-right: 2pc;
+  border-radius: 50%;
   
+}
+
+.button-add {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.display-none {
+  display: none;
+}
+
+.button-submit {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 5px 28px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
