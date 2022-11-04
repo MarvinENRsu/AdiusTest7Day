@@ -2,18 +2,32 @@
 import { useState, useRef } from 'react'
 import axios from 'axios'
 import { BrowserRouter as Router , Route, Link, Routes, useNavigate, redirect } from "react-router-dom";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCoffee } from "@fortawesome/free-solid-svg-icons"
+import {
+  faYoutube,
+  faInstagram,
+  faTwitter,
+  faGithub,
+  faDribbble,
+  faFacebook,
+  faStickerMule
+} from "@fortawesome/free-brands-svg-icons"
 
 function footer() {
   return (
     <div className='section'>
       <div className='row'>
         <div className='column-2'>
-          <h1>Logo</h1>
+        <FontAwesomeIcon className='icon-logo' icon={faStickerMule}></FontAwesomeIcon>
           <p>Making the world a better place through </p>
           <p>constructing elegant hierarchies.</p>
+          <FontAwesomeIcon className='icon-s' icon={faFacebook}></FontAwesomeIcon>
+          <FontAwesomeIcon className='icon-s' icon={faInstagram}></FontAwesomeIcon>
+          <FontAwesomeIcon className='icon-s' icon={faTwitter}></FontAwesomeIcon>
+          <FontAwesomeIcon className='icon-s' icon={faGithub}></FontAwesomeIcon>
+          <FontAwesomeIcon className='icon-s' icon={faDribbble}></FontAwesomeIcon>
         </div>
-        
         <div className='column'>
           <h1>Solutions</h1>
           <p>Marketing</p>
@@ -42,6 +56,7 @@ function footer() {
           <p>Terms</p>
         </div>
       </div>
+      
       <div className='row'>
             <p>©2020 work, Inc. All rights reserved.</p>
           </div>   
