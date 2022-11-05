@@ -4,6 +4,7 @@ import { useRef } from 'react'
 // import { BrowserRouter as Router , Route, Link, Routes, useNavigate, redirect } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faStickerMule } from "@fortawesome/free-brands-svg-icons"
+import { faSignal, faArrowPointer, faShieldHalved, faCube, faList, faArrowsSpin, faRectangleXmark } from "@fortawesome/free-solid-svg-icons"
 
 
 function header() {
@@ -24,16 +25,34 @@ function header() {
         <div className='dropdown'>
           Home
           <div className="dropdown-content">
-            <div className='h1'>Analytics</div>
+            <div className='h1'>
+            <FontAwesomeIcon className='icon-drop' icon={faSignal}></FontAwesomeIcon>
+              Analytics
+            </div>
                 <p>Get a better understanding of where your traffic is coming from.</p>
-            <div className='h1'>Engagement</div>
-                <p>Get a better understanding of where your traffic is coming from.</p>
-            <div className='h1'>Security</div>
-                <p>Get a better understanding of where your traffic is coming from.</p>
-            <div className='h1'>Integrations</div>
-                <p>Get a better understanding of where your traffic is coming from.</p>
-            <div className='h1'>More</div>
-                <p>Get a better understanding of where your traffic is coming from.</p>
+            <div className='h1'>
+              <FontAwesomeIcon className='icon-drop' icon={faArrowPointer}></FontAwesomeIcon>
+              Engagement
+            </div>
+                <p>Speak directiy to your customers in a more meaningful way.</p>
+            <div className='h1'>
+            <FontAwesomeIcon className='icon-drop' icon={faShieldHalved}></FontAwesomeIcon>
+              Security
+            </div>
+                <p>Your customers' data will be safe and secure.</p>
+            <div className='h1'>
+            <FontAwesomeIcon className='icon-drop' icon={faCube}></FontAwesomeIcon>
+              Integrations
+            </div>
+                <p>Connect with third-party tools that you're already using.</p>
+            <div className='h1'>
+              <FontAwesomeIcon className='icon-drop' icon={faArrowsSpin}></FontAwesomeIcon>
+              More
+            </div>
+                <p>Build strategic funnels that will drive your customers to convert.</p>
+                <div className='dropdown-end'>More</div>
+
+                
 
           </div> 
         </div>
@@ -44,11 +63,11 @@ function header() {
 				<button
 					className="nav-btn nav-close-btn"
 					onClick={showNavbar}>
-                    Header
+           <FontAwesomeIcon className='icon-respon' icon={faRectangleXmark}></FontAwesomeIcon>
 				</button>
 			</nav>
 			<button className="nav-btn" onClick={showNavbar}>
-				Close
+      <FontAwesomeIcon className='icon-respon' icon={faList}></FontAwesomeIcon>
 			</button>
 		</header>
     )
