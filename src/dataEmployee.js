@@ -15,7 +15,7 @@ function DataEmployee() {
   useEffect(() => {
     const token = sessionStorage.getItem('token')
     // !token = null, undefined, '', 0
-    if (token) navigate('/login')
+    if (!token) navigate('/login')
     getDataUsers()
   }, [])
 
@@ -53,10 +53,6 @@ function DataEmployee() {
        
   }
 
-  
-
-  
-
   return (
     <div className="App">
       <Header></Header>
@@ -86,16 +82,7 @@ function DataEmployee() {
             {editTable && (
               <tr className={editTable}>
                 <td>
-                  {/* <input 
-                    className='input-box' 
-                    type="text" 
-                    name="password" 
-                    placeholder="Email.."
-                    onChange={(e) => {
-                        console.log(e.target.value)
-                        setEmail(e.target.value)
-                    }}
-                  /> */}
+                
                 </td>
                 <td><input 
                     className='input-box' 

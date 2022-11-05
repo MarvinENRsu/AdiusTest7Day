@@ -8,12 +8,7 @@ import { faSignal, faArrowPointer, faShieldHalved, faCube, faList, faArrowsSpin,
 
 
 function header() {
-  // const navigate = useNavigate()
-  //   const [email, setEmail] = useState('')
-  //   const [password, setPassword] = useState('')
-
-    const navRef = useRef();
-
+  const navRef = useRef();
 	const showNavbar = () => {
 		navRef.current.classList.toggle("responsive_nav");
 	};
@@ -50,10 +45,6 @@ function header() {
               Automations
             </div>
                 <p>Build strategic funnels that will drive your customers to convert.</p>
-    
-
-                
-
           </div> 
         </div>
 				<a href="/#">Pricing</a>

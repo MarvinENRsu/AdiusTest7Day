@@ -6,16 +6,8 @@ import { BrowserRouter as Router , Route, Link, Routes, useNavigate, redirect } 
 
 function login() {
   const navigate = useNavigate()
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
-    // useEffect(() => {
-    //   console.log('start')
-
-    //   return () => {
-    //     console.log('destroy')
-    //   }
-    // }, [])
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
 
     useEffect(() => {
       console.log('typing')
@@ -25,17 +17,17 @@ function login() {
 
     const onClickLogin = async () => { 
       toast()
-        // await axios.post('https://reqres.in/api/login', {
-        //     "email": email,
-        //     "password": password
-        // }).then((res) => {
-        //   console.log(res)
-        //     if (res.data.token) {
-        //       sessionStorage.setItem('token', res.data.token)
-        //       console.log('if')
-        //       navigate('/')
-        //     }
-        // })
+        await axios.post('https://reqres.in/api/login', {
+            "email": email,
+            "password": password
+        }).then((res) => {
+          console.log(res)
+            if (res.data.token) {
+              sessionStorage.setItem('token', res.data.token)
+              console.log('if')
+              navigate('/')
+            }
+        })
     }
 
     const toast = () =>{
@@ -44,10 +36,6 @@ function login() {
 
     return (
         <div className="App">
-          {/* <div className="toast"> */}
-            {/* <div className="toast-box">icon</div> */}
-            {/* <div className="desc">A notification message..</div> */}
-          {/* </div> */}
           <div className="login-section">
             <div className="login-box">
               <div className='mb-1'> 
@@ -83,7 +71,7 @@ function login() {
                       console.log(e.target.value)
                       setPassword(e.target.value)
                   }}
-                />
+                />  
               </div>
               <div className='mb-1' >
                 <button className='login-btn' onClick={() => onClickLogin()}>

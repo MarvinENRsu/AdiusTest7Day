@@ -13,7 +13,6 @@ function App() {
       <Routes >
         <Route path="/" element={<DataEmployee />} />
         <Route path="/login" element={<Login />} />
-        {/* <Route path="/data" element={<DataEmployee />} /> */}
       </Routes>
       </div>
    
