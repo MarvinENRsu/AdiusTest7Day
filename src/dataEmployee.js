@@ -60,9 +60,22 @@ function DataEmployee() {
   return (
     <div className="App">
       <Header></Header>
-      <button className='button-add' onClick={() => onClickAdduser()}>
+      <div className='section-eployee'>
+        <div className='row'>
+          <div className='column-eployee2'>
+            <div className='h1-eployee'>
+            </div>
+            <div className='p-eployee'>
+              Users
+            </div>
+            <div className='p-employee'>A list of all the users in your account including their name, title, email and role.</div>
+            <button className='button-add' onClick={() => onClickAdduser()}>
         Add Users
       </button>
+          </div>
+        </div>
+      </div>
+      
         <div className="table-section">
           <table>
             <tr>
@@ -104,7 +117,10 @@ function DataEmployee() {
                         setLastname(e.target.value)
                     }}
                   /></td>
-                  <button className='button-submit' onClick={() => onClickSumit()}>Accep</button>
+                 
+                    <button className='button-submit' onClick={() => onClickSumit()}>Accep
+                    </button>
+                 
               </tr>
             )}
             {dataUser.map((val, key) => {

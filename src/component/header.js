@@ -23,7 +23,7 @@ function header() {
 			<FontAwesomeIcon className='icon-header' icon={faStickerMule}></FontAwesomeIcon>
 			<nav ref={navRef}>
         <div className='dropdown'>
-          Home
+          <p>Home</p>
           <div className="dropdown-content">
             <div className='h1'>
             <FontAwesomeIcon className='icon-drop' icon={faSignal}></FontAwesomeIcon>
@@ -47,10 +47,10 @@ function header() {
                 <p>Connect with third-party tools that you're already using.</p>
             <div className='h1'>
               <FontAwesomeIcon className='icon-drop' icon={faArrowsSpin}></FontAwesomeIcon>
-              More
+              Automations
             </div>
                 <p>Build strategic funnels that will drive your customers to convert.</p>
-                <div className='dropdown-end'>More</div>
+    
 
                 
 
